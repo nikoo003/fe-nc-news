@@ -1,14 +1,18 @@
-import { useState } from 'react'
-import './App.css'
-import Login from '../components/login'
+import { useState } from "react";
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Login from "../components/login";
+import Topics from "../components/topics";
 
 function App() {
-
   return (
-    <div className='app'>
-      <Login />
+    <div className="app">
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/topics" element={<Topics />} />
+      </Routes>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
