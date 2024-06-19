@@ -5,13 +5,13 @@ const ncNews = axios.create({
 });
 
 export function getLogin() {
-  return ncNews
-    .get("/")
-    .then((res) => {
-      console.log(res);
-      res.data;
+  return ncNews.get("/").then((res) => {
+    res.data;
+  });
+}
+
+export function getTopics () {
+    return ncNews.get("/topics").then((res)=>{
+        console.log(res)
     })
-    .catch((err) => {
-      console.log("errooorrrr", err);
-    });
 }

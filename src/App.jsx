@@ -5,6 +5,9 @@ import Login from "../components/login";
 import Topics from "../components/topics";
 
 function App() {
+
+  const [topics, setTopics] = useState([])
+
   return (
     <div className="app">
       <Routes>

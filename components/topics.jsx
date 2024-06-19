@@ -1,9 +1,14 @@
-const Topics =()=>{
-    return (
-        <section className="Topics-page">
-            <h1>topics page</h1>
-        </section>
-    )
-}
+import { useState } from "react";
+import TopicsList from "./topics-list";
 
-export default Topics
+const Topics = () => {
+  const [topics, setTopics] = useState();
+
+  return (
+    <section className="topics">
+      <TopicsList topics={topics} setTopics={setTopics}/>
+    </section>
+  );
+};
+
+export default Topics;
