@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { getArticles } from "../src/utils/api";
 import "../styling/article-cards.css";
 
