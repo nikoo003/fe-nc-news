@@ -1,0 +1,23 @@
+import axios from "axios";
+
+const ncNews = axios.create({
+  baseURL: "https://nc-news-g7c7.onrender.com/api",
+});
+
+export function getLogin() {
+  return ncNews.get("/").then((res) => {
+    res.data;
+  });
+}
+
+export function getTopics () {
+    return ncNews.get("/topics").then((res)=>{
+        return res.data.topics
+    })
+}
+
+export function getArticles () {
+    return ncNews.get("/articles").then((res)=>{
+        return res.data.articles
+    })
+}

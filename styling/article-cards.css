@@ -1,0 +1,6 @@
+.article-card{
+    list-style-type: none;
+    border: 2px solid;
+    margin-bottom: 10%;
+    border-color: blueviolet;
+}
