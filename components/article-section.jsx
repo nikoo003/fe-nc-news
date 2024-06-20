@@ -24,6 +24,7 @@ function ArticleSection() {
     <section className="article-section">
       <h2>{article.title}</h2>
       <img src={article.article_img_url} />
+      <p>Votes: {article.votes}</p>
       <p>topic: {article.topic}</p>
       <p>created: {article.created_at}</p>
       <p>"{article.body}"</p>
