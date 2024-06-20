@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Login from "../components/login";
 import TopicsList from "../components/topics-list";
 import ArticlesList from "../components/articles-list";
+import ArticleById from "../components/article-by-id";
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/topics" element={<TopicsList />} />
         <Route path="/articles" element={<ArticlesList />} />
+        <Route path="/articles/:article_id" element={<ArticleById />} />
       </Routes>
     </div>
   );

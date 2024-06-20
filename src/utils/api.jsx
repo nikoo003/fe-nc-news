@@ -10,14 +10,20 @@ export function getLogin() {
   });
 }
 
-export function getTopics () {
-    return ncNews.get("/topics").then((res)=>{
-        return res.data.topics
-    })
+export function getTopics() {
+  return ncNews.get("/topics").then((res) => {
+    return res.data.topics;
+  });
 }
 
-export function getArticles () {
-    return ncNews.get("/articles").then((res)=>{
-        return res.data.articles
-    })
+export function getArticles() {
+  return ncNews.get("/articles").then((res) => {
+    return res.data.articles;
+  });
+}
+
+export function getArticleById(article_id) {
+  return ncNews.get(`/articles/${article_id}`).then((res) => {
+    return res.data
+  });
 }
