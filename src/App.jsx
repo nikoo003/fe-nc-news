@@ -2,17 +2,16 @@ import { useState } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Login from "../components/login";
-import Topics from "../components/topics";
+import TopicsList from "../components/topics-list";
 
 function App() {
 
-  const [topics, setTopics] = useState([])
 
   return (
     <div className="app">
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/topics" element={<Topics />} />
+        <Route path="/topics" element={<TopicsList />} />
       </Routes>
     </div>
   );

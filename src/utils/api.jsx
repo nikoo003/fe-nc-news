@@ -12,6 +12,6 @@ export function getLogin() {
 
 export function getTopics () {
     return ncNews.get("/topics").then((res)=>{
-        console.log(res)
+        return res.data.topics
     })
 }

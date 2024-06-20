@@ -1,19 +1,20 @@
 import { getTopics } from "../src/utils/api";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-function TopicsList({ topics, setTopics }) {
+function TopicsList() {
+  const [topics, setTopics] = useState([]);
 
   useEffect(() => {
     getTopics().then((data) => {
       setTopics(data);
     });
-  }, [setTopics]);
+  }, []);
 
   return (
     <section className="topics-list">
       <h3>Pick a topic</h3>
       <ul>
-        {topics.map(({ topic }) => (
+        {topics.map((topic) => (
           <li key={topic.slug}>{topic.slug}</li>
         ))}
       </ul>
