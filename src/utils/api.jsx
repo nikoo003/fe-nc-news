@@ -15,3 +15,9 @@ export function getTopics () {
         return res.data.topics
     })
 }
+
+export function getArticles () {
+    return ncNews.get("/articles").then((res)=>{
+        return res.data.articles
+    })
+}

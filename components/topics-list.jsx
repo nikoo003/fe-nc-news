@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { getTopics } from "../src/utils/api";
 import { useEffect, useState } from "react";
 
@@ -18,6 +19,9 @@ function TopicsList() {
           <li key={topic.slug}>{topic.slug}</li>
         ))}
       </ul>
+      <Link to={"/articles"}>
+        <button>temp link to articles for task 4</button>
+      </Link>
     </section>
   );
 }
