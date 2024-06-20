@@ -15,7 +15,7 @@ function ArticlesList() {
       <h3>All articles</h3>
       <ul>
         {articles.map((article) => {
-          return <ArticleCard article={article} />;
+          return <ArticleCard key={article.article_id} article={article} />;
         })}
       </ul>
     </section>
