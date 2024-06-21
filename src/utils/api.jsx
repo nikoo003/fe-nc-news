@@ -33,3 +33,9 @@ export function getCommentsByArticleId(article_id) {
     return res.data;
   });
 }
+
+export function updateVotes(article_id) {
+  return ncNews.patch(`/articles/${article_id}`).then((res)=>{
+    return res.data
+  })
+}
