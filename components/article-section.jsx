@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getArticleById } from "../src/utils/api";
 import CommentsByArticleId from "./comments";
+import Votes from "./votes";
 
 function ArticleSection() {
   const [article, setArticle] = useState({});
@@ -10,6 +11,7 @@ function ArticleSection() {
   const { article_id } = useParams();
 
   useEffect(() => {
+    setLoading(true);
     getArticleById(article_id).then((data) => {
       setArticle(data);
       setLoading(false);
@@ -22,6 +24,7 @@ function ArticleSection() {
 
   return (
     <section className="article-section">
+      <Votes article_votes={article.votes} />
       <h2>{article.title}</h2>
       <img src={article.article_img_url} />
       <p>topic: {article.topic}</p>
