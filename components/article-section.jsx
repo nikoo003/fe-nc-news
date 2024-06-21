@@ -11,6 +11,7 @@ function ArticleSection() {
   const { article_id } = useParams();
 
   useEffect(() => {
+    setLoading(true);
     getArticleById(article_id).then((data) => {
       setArticle(data);
       setLoading(false);
@@ -23,10 +24,9 @@ function ArticleSection() {
 
   return (
     <section className="article-section">
-      <Votes />
+      <Votes article_votes={article.votes} />
       <h2>{article.title}</h2>
       <img src={article.article_img_url} />
-      <p>Votes: {article.votes}</p>
       <p>topic: {article.topic}</p>
       <p>created: {article.created_at}</p>
       <p>"{article.body}"</p>
